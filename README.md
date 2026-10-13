@@ -37,7 +37,21 @@ dsh plugin --profile <你的profile> add https://github.com/zyn19940107/dsh-cust
 
 ---
 
-## 面板能做什么
+## 界面
+
+面板就在插件详情页上,描述和组件之间。
+
+![工具列表](docs/screenshots/tool-list.png)
+
+点工具名打开它的配置:
+
+![工具配置](docs/screenshots/tool-dialog.png)
+
+「新增工具」会追加一条,并立刻打开新条目的配置:
+
+![新增工具](docs/screenshots/tool-added.png)
+
+### 面板能做什么
 
 | 操作 | 说明 |
 |---|---|

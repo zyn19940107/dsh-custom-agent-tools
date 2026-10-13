@@ -13,3 +13,7 @@ LOADED.txt
 
 # Screenshots taken while verifying the UI in a browser.
 *.png
+
+# README screenshots are documentation and must be committed, unlike the
+# throwaway verification captures taken while driving a local browser.
+!docs/screenshots/*.png
