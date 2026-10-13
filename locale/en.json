@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "My delegation tools",
+    "description": "Add, remove and configure your own delegation tools. Each enabled tool is registered at boot as a model-callable tool. The built-in subagent and subagent_fork are untouched."
+  }
+}

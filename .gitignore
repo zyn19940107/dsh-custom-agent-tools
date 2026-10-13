@@ -1,0 +1,15 @@
+# Dependencies are never committed: esbuild and its platform binary were copied
+# in from another workspace purely to make `node build.mjs` runnable offline.
+node_modules/
+
+# Runtime diagnostic left behind by an earlier revision of the Host half.
+LOADED.txt
+
+# Local scratch produced while driving the sandbox.
+*.log
+*-out.txt
+*-err.txt
+*.result.txt
+
+# Screenshots taken while verifying the UI in a browser.
+*.png

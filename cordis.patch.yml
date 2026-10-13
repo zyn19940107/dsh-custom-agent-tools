@@ -1,0 +1,25 @@
+# custom-agent bundle: one Loader row, two halves.
+#
+# A bundle is NOT a Loader row (app-boot/src/profile.ts:674) — the loader only
+# reads the bundle's patch files, so this row is the only reason lib/index.js is
+# ever imported. One row registers BOTH halves: the Host half from `main`, and
+# the browser half because the package declares `dsh.client`, which makes
+# lib/client.js the module-table row the shell loads. A second row naming this
+# package would register the overlay twice.
+#
+# There is deliberately no `tool-reviewer` row. Roles are settings data, not
+# patch entries: the Host half reads its `roles` Config and registers one
+# delegation tool per enabled role. Editing the patch to add a role would create
+# a second source of truth that the Plugins-page card cannot see.
+#
+# A role registered from settings therefore never appears in `--dump-config`.
+# The boot log is its observable: every registration prints a custom-agent line,
+# and the count line states how many roles actually activated.
+#
+# The row id IS the settings namespace the browser half edits
+# (packages/settings/settings/src/index.ts `describe()` keys on `entry.id`), so
+# it must stay `custom-agent` to match the card's `NS`.
+
+- insert:
+    - id: custom-agent
+      name: '@zyn19940107/dsh-custom-agent'
